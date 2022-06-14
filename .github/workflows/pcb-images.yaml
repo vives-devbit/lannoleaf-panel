@@ -3,7 +3,7 @@ name: Generate PCB Images
 on:
   push:
     paths:
-      - proto-board.kicad_pcb
+      - LannooLeaf.kicad_pcb
 
 jobs:
   build:
@@ -17,8 +17,8 @@ jobs:
     - name: build-example
       run: |
         mkdir -p ./img
-        pcbdraw proto-board.kicad_pcb ./img/front.png --dpi 600
-        pcbdraw proto-board.kicad_pcb ./img/back.png --back --dpi 600
+        pcbdraw LannooLeaf.kicad_pcb ./img/front.png --dpi 600
+        pcbdraw LannooLeaf.kicad_pcb ./img/back.png --back --dpi 600
           
     - name: Commit changes
       uses: EndBug/add-and-commit@v7
